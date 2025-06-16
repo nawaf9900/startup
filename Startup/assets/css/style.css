@@ -260,7 +260,6 @@ html {
 }
 
 .feature-left {
-  flex: 0.8;
   /* Reduce image container width slightly */
   display: flex;
   justify-content: center;
@@ -279,9 +278,8 @@ html {
 
 .feature-left img {
   width: 100%;
-  max-width: 480px;
-  margin-left: -150px;
-  top: 40px;
+  max-width: 400px;
+
 }
 
 .swiper {
