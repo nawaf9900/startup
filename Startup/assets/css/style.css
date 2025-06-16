@@ -15,7 +15,8 @@ html {
 .hero {
   background: linear-gradient(rgba(35, 0, 77, 0.6), rgba(35, 0, 77, 0.6)),
     url("../images/header.jpg") no-repeat center center/cover;
-  height: 100vh;
+  height: 100dvh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,18 +28,44 @@ html {
 }
 
 .navbar {
-  text-align: center;
+  width: 100%;
   display: flex;
-  gap: 30px;
   justify-content: center;
-  font-size: 16px;
+  gap: 40px;
+  padding-top: 25px;
+  font-size: 18px;
   font-weight: 500;
-  color: #ffff;
+  background: transparent;
+  z-index: 10;
+  position: relative;
 }
 
-.navbar span.active {
-  color: #ffffff7c;
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+  font-weight: 500;
+  transition: opacity 0.2s, font-weight 0.2s;
+}
+
+.nav-link.active {
+  opacity: 0.4;
   font-weight: 600;
+  pointer-events: none;
+}
+
+.nav-link:not(.active):hover {
+  opacity: 0.7;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.icon-link svg {
+  display: block;
 }
 
 .slider {
@@ -112,6 +139,9 @@ html {
   color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   user-select: none;
+  margin-top: -154px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .dots {
@@ -240,27 +270,27 @@ html {
 
 .feature-right {
   flex: 1.2;
-  /* Increase right side width slightly */
   display: flex;
-  justify-content: flex-start;
-  /* Align to the left */
-  padding-left: -105rem;
-
+  justify-content: center;
+  align-items: center;
+  padding-left: 0; /* Remove previous padding */
 }
+
 
 .feature-left img {
   width: 100%;
   max-width: 480px;
-  margin-left: -160px;
+  margin-left: -150px;
   top: 40px;
 }
 
 .swiper {
-  width: 100%;
-  max-width: 600px;
-  height: 500px;
+  width: 90%;
+  max-width: 1000px; /* Optional: widen to balance image */
+  height: 450px;
   color: white;
 }
+
 
 .swiper-slide {
   display: flex;
@@ -294,11 +324,13 @@ html {
   align-items: center;
   height: 28.8rem;
 }
+
 .display-feature .wrapper{
   width: 100%;
 }
+
 .feature-title {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -306,7 +338,7 @@ html {
 .feature-desc {
   font-size: 1.1rem;
   color: #e0e0e0;
-  margin-bottom: 20px;
+  margin-bottom: 85px;
 }
 
 .feature-features {
@@ -320,7 +352,7 @@ html {
   min-width: 140px;
 }
 
-.feature-feature-icon svg {
+.feature-feature-icon img {
   width: 36px;
   height: 36px;
   margin-bottom: 0.5rem;
@@ -329,24 +361,25 @@ html {
 .feature-feature-title {
   font-weight: 700;
   font-size: 0.95rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.7rem;
 }
 
 .feature-feature-desc {
   font-size: 0.9rem;
   color: #ccc;
+  gap: 30px;
 }
 
 .swiper-pagination {
   position: absolute;
-  right: 10px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 @media (min-width: 1200px) {
   .feature-right {
-    padding-left: 4rem;
+    padding-left: 5rem;
   }
 }
 
@@ -370,16 +403,20 @@ html {
     flex-direction: column;
   }
 
-  .swiper-slide {
-    text-align: left;
-  }
+  .swiper {
+  width: 100%;
+  max-width: 800px; /* Optional: widen to balance image */
+  height: 500px;
+  color: white;
+}
+
 
   .swiper-pagination {
     position: relative;
     top: auto;
     right: auto;
     transform: none;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
   }
@@ -550,7 +587,7 @@ body {
 .clients-section {
   background: #1a0e5c;
   min-height: 100vh;
-  padding: 62px 0 0 0;
+  padding: 82px 0 0 0;
 }
 
 .clients-section h2 {
@@ -795,7 +832,7 @@ body {
 }
 
 .team-section {
-  background: #1a0e5c;
+  background: #1c1154;;
   padding: 80px 0 100px 0;
   color: #fff;
   min-height: 100vh;
@@ -940,7 +977,7 @@ body {
 .info-item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 69px;
   font-size: 16px;
 }
 
@@ -957,8 +994,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
-  height: 440px;
-  top: 100px;
+  height: 530px;
+  width:100px;
 }
 
 .form-row {
